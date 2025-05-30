@@ -11,3 +11,4 @@
 - https://drive.google.com/drive/folders/1ixp17p0PIQTV4ZK80Df8wkWaA6fNPPch?fbclid=IwY2xjawKi2U9leHRuA2FlbQIxMABicmlkETFvSFM2RXRsSlhKTHcycHUwAR45gwVsYlkNqNyb0NH3ZkQD8iXNhJcgsOAC09kKwWz1LPJdPBbEpNjazAvJqg_aem_Ee06b_QNqvZc7zZ2GwICsg
 - https://gemini.google.com/app/ee4aa284044ffc7e
 - https://chatgpt.com/c/68361c9c-cdac-800b-a5a9-aed6a1961359
+- https://gemini.google.com/app/673925687d896de8
