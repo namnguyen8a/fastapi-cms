@@ -14,3 +14,4 @@
 - https://gemini.google.com/app/673925687d896de8
 - https://chatgpt.com/c/683a7e81-0a10-800b-9a9b-9c7efbd4d969
 - https://www.geeksforgeeks.org/how-to-design-a-database-for-content-management-system-cms/
+- https://testdriven.io/blog/fastapi-jwt-auth/
