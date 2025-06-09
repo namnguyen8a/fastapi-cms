@@ -1,11 +1,14 @@
 # https://chatgpt.com/c/6841882b-e288-800b-ad2a-5d36d60dd062 (explain jwt flow)
 
 from typing import Annotated
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, HTTPException, status
 from pydantic import BaseModel
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 import jwt
 from passlib.context import CryptContext
+from fastapi.staticfiles import StaticFiles # Import StaticFiles
+from fastapi.responses import HTMLResponse # Import HTMLResponse
+from fastapi.requests import Request # Import Request
 
 
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
@@ -42,6 +45,15 @@ class User(BaseModel):
 app = FastAPI()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/", response_class=HTMLResponse)
+async def read_root():
+    # Read the login.html content
+    with open("static/login.html", "r") as f:
+        html_content = f.read()
+    return HTMLResponse(content=html_content)
 
 @app.post("/create-user/")
 async def create_user(user: User):
